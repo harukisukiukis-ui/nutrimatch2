@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#173e2b"><title>NutriMatch — Your Nutrition Partner</title>
+<style>
+:root{--green:#173e2b;--green2:#2f6846;--cream:#f7f0e4;--paper:#fffaf2;--tan:#e8d7bd;--brown:#74553c;--ink:#25382b;--muted:#7b8175;--gold:#d9b66e;--shadow:0 14px 35px #183c2812}*{box-sizing:border-box}body{margin:0;background:#e9e4d9;color:var(--ink);font-family:ui-rounded,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif}.app{max-width:430px;min-height:100dvh;margin:auto;background:var(--cream);position:relative;padding-bottom:88px;box-shadow:0 0 50px #263b2a20}.top{background:var(--green);color:#fff;padding:22px 22px 26px;border-radius:0 0 28px 28px}.brand{font-family:Georgia,serif;font-size:21px;letter-spacing:.3px;border:0;background:transparent;color:inherit;text-align:left;padding:8px 0;cursor:pointer;min-height:44px;display:flex;flex-direction:column;justify-content:center}.brand small{display:block;font:10px Arial;letter-spacing:1.8px;opacity:.75;margin-top:3px}.topline{display:flex;align-items:center;justify-content:space-between}.pill{border:1px solid #ffffff55;border-radius:20px;padding:7px 11px;font-size:11px;color:#f6ead8}.greeting{margin:24px 0 4px;font-size:23px;font-weight:700}.sub{font-size:13px;color:#e3e9dd;line-height:1.7}.content{padding:20px 18px}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin:5px 2px 12px}.sectionhead h2{font-size:17px;margin:0}.sectionhead span{font-size:11px;color:var(--green2)}.card{background:var(--paper);border:1px solid #e9dece;border-radius:20px;padding:16px;margin-bottom:14px;box-shadow:var(--shadow)}.companion{display:flex;gap:13px;align-items:center;background:linear-gradient(135deg,#e5d4b7,#f7eadd);border-radius:22px;padding:15px;margin-bottom:18px}.avatar{width:68px;height:68px;border-radius:50%;background:#fff8e9;display:grid;place-items:center;font-size:39px;flex-shrink:0;border:2px solid #fff}.companion b{font-size:14px}.companion p{font-size:12px;margin:5px 0 0;line-height:1.6;color:#675744}.btn{border:0;background:var(--green);color:#fff;border-radius:14px;padding:13px 16px;font-weight:700;font-size:14px;cursor:pointer;width:100%;margin-top:9px}.btn.secondary{background:#e8ddc9;color:var(--green)}.btn.light{background:#fff7e9;color:var(--green);border:1px solid #dfcfb5}.moods{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.mood{border:1px solid #e7dbc9;background:#fff8ed;border-radius:14px;padding:11px 3px;text-align:center;cursor:pointer;font-size:11px}.mood .emoji{display:block;font-size:23px;margin-bottom:5px}.mood.active{background:#dce8d8;border-color:#8ba88a}.food{display:flex;gap:12px;align-items:center}.foodimg{width:94px;height:84px;border-radius:15px;object-fit:cover;background:#e4d6c1}.food h3{font-size:13px;margin:0 0 5px}.food p{font-size:11px;color:var(--muted);margin:0;line-height:1.6}.tag{display:inline-block;background:#e4ebdd;color:#426445;border-radius:9px;padding:4px 7px;font-size:10px;margin:4px 3px 0 0}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini{background:#fffaf2;border:1px solid #e9dece;border-radius:17px;padding:14px}.mini .big{font-size:24px;font-weight:700;color:var(--green)}.mini small{font-size:11px;color:var(--muted)}.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,100%);background:#fffaf2f2;backdrop-filter:blur(12px);border-top:1px solid #e6dac8;display:flex;justify-content:space-around;padding:10px 6px calc(10px + env(safe-area-inset-bottom));z-index:5}.nav button{border:0;background:none;color:#7b8175;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;min-width:54px}.nav button span{font-size:20px}.nav button.active{color:var(--green);font-weight:700}.page{display:none}.page.active{display:block}.chatbox{height:52vh;min-height:320px;display:flex;flex-direction:column;gap:12px}.bubble{max-width:83%;padding:12px 14px;border-radius:17px;font-size:13px;line-height:1.7}.bubble.ai{background:#fffaf2;border:1px solid #e9dece;align-self:flex-start;border-bottom-left-radius:5px}.bubble.me{background:#dce8d8;align-self:flex-end;border-bottom-right-radius:5px}.chatinput{display:flex;gap:8px;margin-top:auto}.chatinput input{min-width:0;flex:1;border:1px solid #e2d4c0;background:#fffaf2;border-radius:14px;padding:12px;font-size:13px}.chatinput button{width:48px;border:0;border-radius:14px;background:var(--green);color:#fff;font-size:18px}.recipe{display:flex;gap:12px;margin-bottom:12px}.recipe img{width:105px;height:95px;object-fit:cover;border-radius:15px}.recipe h3{font-size:13px;margin:3px 0 6px}.recipe p{font-size:11px;color:var(--muted);margin:0;line-height:1.6}.score{width:126px;height:126px;border-radius:50%;background:conic-gradient(#d9b66e 0 28%,#477b58 28% 62%,#82a9b1 62% 85%,#e9dfce 85%);display:grid;place-items:center;margin:auto}.scoreinner{width:98px;height:98px;background:var(--paper);border-radius:50%;display:grid;place-content:center;text-align:center}.scoreinner strong{font-size:30px}.scoreinner small{font-size:10px;color:var(--muted)}.bars div{display:flex;align-items:center;gap:9px;font-size:11px;margin:10px 0}.track{height:8px;background:#eee4d5;border-radius:10px;flex:1;overflow:hidden}.track i{display:block;height:100%;background:var(--green2);border-radius:10px}.field{margin:13px 0}.field label{display:block;font-size:12px;margin-bottom:6px;color:#6d705f}.field input,.field select{width:100%;padding:12px;border:1px solid #e1d3bf;border-radius:12px;background:#fffaf2;font-size:14px}.choice{display:flex;gap:10px}.choice button{flex:1;background:#fff8ed;border:1px solid #e4d6c2;border-radius:15px;padding:13px;cursor:pointer}.choice button.selected{background:#dce8d8;border-color:#6d986d}.notice{font-size:11px;color:#858675;line-height:1.6}.toast{position:fixed;bottom:95px;left:50%;transform:translateX(-50%);background:#173e2b;color:white;border-radius:20px;padding:10px 16px;font-size:12px;display:none;z-index:10}.welcome{min-height:100dvh;background:linear-gradient(135deg,#173e2b,#2f6846 60%,#74553c);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:30px;text-align:center}.welcome .logo{font:42px Georgia,serif;margin-bottom:8px}.welcome p{color:#e2e8dc;line-height:1.8;font-size:14px}.welcome .btn{background:#f6ead8;color:var(--green);max-width:290px;margin:25px auto 0}.hidden{display:none!important}
+</style></head><body>
+<div class="app" id="app">
+<section id="welcome" class="welcome"><div class="logo">☘ NutriMatch</div><div style="font:12px Arial;letter-spacing:2px">YOUR NUTRITION PARTNER</div><p>いつでも、あなたのそばに。<br>食からはじまる、心地よい毎日。</p><button class="btn" onclick="startApp()">はじめる →</button><p style="font-size:11px">あなたの食の居場所へ</p></section>
+<div id="main" class="hidden">
+<header class="top"><div class="topline"><button class="brand" type="button" aria-label="NutriMatch ホームに戻る" onclick="showPage('home')">NutriMatch<small>YOUR NUTRITION PARTNER</small></button><div class="hr"><button class="setbtn" id="setBtn" type="button" aria-current="false" onclick="showPage('settings')">⚙ 設定</button><div class="pill">☘ My Café</div></div></div><div class="greeting" id="hello">こんにちは！</div><div class="sub">今日はどんな気分？ 一緒に食事を考えよう。</div></header>
+<section class="page active" id="home"><div class="content"><div class="companion"><div class="avatar" id="homeAvatar">👩🏻‍🍳</div><div><b id="compName">あなたの食のパートナー</b><p id="compSay">「今日も来てくれてうれしい！何を食べたい気分？」</p></div></div><div class="sectionhead"><h2>今日の気分</h2><span>タップして選ぶ</span></div><div class="moods" id="moods"><button class="mood active" onclick="mood(this,'元気')"><span class="emoji">😊</span>元気</button><button class="mood" onclick="mood(this,'のんびり')"><span class="emoji">😌</span>のんびり</button><button class="mood" onclick="mood(this,'疲れ気味')"><span class="emoji">🥱</span>疲れ気味</button><button class="mood" onclick="mood(this,'ストレス')"><span class="emoji">😵‍💫</span>ストレス</button></div><div class="sectionhead" style="margin-top:23px"><h2>今日のおすすめ</h2><span onclick="showPage('recipes')">レシピ一覧 →</span></div><div class="card food"><img id="foodImg" class="foodimg" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=400&q=80" alt="サラダ"><div><h3 id="foodName">鶏むね肉とアボカドの彩りサラダ</h3><p id="foodMeta">約15分 ・ 420kcal</p><div id="foodTags"><span class="tag">高たんぱく</span><span class="tag">おすすめ</span></div></div></div><button class="btn" onclick="showPage('chat')">✦ AIと相談する</button><div class="grid2" style="margin-top:14px"><div class="mini" onclick="showPage('nutrition')"><small>今日の栄養バランス</small><div class="big">85<small> /100</small></div></div><div class="mini" onclick="showPage('lounge')"><small>Nutrition Lounge</small><div class="big" style="font-size:17px;margin-top:8px">食の読みもの ↗</div></div></div></div></section>
+<section class="page" id="chat"><div class="content"><div class="sectionhead"><h2>AIコンパニオン</h2><span>いつでも相談</span></div><div class="companion"><div class="avatar" id="chatAvatar">👩🏻‍🍳</div><div><b id="chatName">あなたのパートナー</b><p>食事のこと、気軽に話してね。</p></div></div><div class="card chatbox" id="chatbox"><div class="bubble ai">こんにちは！今日はどんな食事にしようか？気分や食材を教えてね ☘</div><div class="bubble me">たんぱく質をしっかり摂りたい！</div><div class="bubble ai">いいね！鶏むね肉や卵、豆腐を使ったメニューはどうかな？簡単なレシピを紹介するね。</div><div class="chatinput"><input id="message" placeholder="食事のことを話してみよう…"><button onclick="sendMessage()">➤</button></div></div><p class="notice">※ これは画面操作のデモです。AIによる実際の応答はまだ接続されていません。</p></div></section>
+<section class="page" id="recipes"><div class="content"><div class="sectionhead"><h2>あなたへのレシピ</h2><span>今日の気分に合わせて</span></div><div class="card recipe"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=400&q=80"><div><h3>鶏むね肉とアボカドサラダ</h3><p>15分・420kcal<br>高たんぱくで満足感◎</p><button class="btn secondary" onclick="toast('レシピを保存しました ♡')">♡ 保存する</button></div></div><div class="card recipe"><img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=400&q=80"><div><h3>豆腐ときのこのスープ</h3><p>20分・280kcal<br>ほっと温まる一品</p><button class="btn secondary" onclick="toast('レシピを保存しました ♡')">♡ 保存する</button></div></div><div class="card recipe"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&q=80"><div><h3>彩り野菜のボウル</h3><p>10分・350kcal<br>野菜を手軽にプラス</p><button class="btn secondary" onclick="toast('レシピを保存しました ♡')">♡ 保存する</button></div></div></div></section>
+<section class="page" id="nutrition"><div class="content"><div class="sectionhead"><h2>今日の栄養バランス</h2><span>サンプル表示</span></div><div class="card" style="text-align:center"><div class="score"><div class="scoreinner"><strong>85</strong><small>/100 点</small></div></div><p style="font-size:13px;margin:15px 0 0">いいバランス！この調子でいこう ☘</p></div><div class="card bars"><div>たんぱく質 <span class="track"><i style="width:72%"></i></span>28%</div><div>脂質 <span class="track"><i style="width:62%"></i></span>32%</div><div>炭水化物 <span class="track"><i style="width:80%"></i></span>40%</div></div><p class="notice">※ 数値はデザイン確認用のサンプルです。実際の食事記録・栄養計算とは連動していません。</p></div></section>
+<section class="page" id="lounge"><div class="content"><div class="sectionhead"><h2>Nutrition Lounge</h2><span>食と健康をもっと楽しく</span></div><div class="card"><img style="width:100%;height:155px;object-fit:cover;border-radius:15px" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80"><h3>食べるだけで整う、バランスごはん</h3><p class="notice">毎日の食事に取り入れたい、やさしい食のヒント。</p><button class="btn secondary" onclick="toast('記事を開くデモです')">記事を読む →</button></div><div class="card"><h3>今日の小さな食習慣</h3><p style="font-size:13px;line-height:1.8">まずは一品、野菜や豆類をプラスしてみよう。完璧じゃなくて大丈夫。</p></div></div></section>
+<section class="page" id="profile"><div class="content"><div class="sectionhead"><h2>マイページ</h2><span>あなたの情報</span></div><div class="companion"><div class="avatar" id="profileAvatar">👩🏻‍🍳</div><div><b id="profileName">こんにちは！</b><p>あなたの食のパートナー</p></div></div><div class="card" id="profSummary"></div><button class="btn" onclick="showPage('settings')">⚙ 設定を開く</button><p class="notice">プロフィールはこのデモ画面内で保持されます。実際のアカウント登録・クラウド保存は未実装です。</p></div></section>
+<section class="page" id="settings"><div class="content"><div class="sectionhead"><h2>設定</h2><span>プロフィール設定</span></div>
+<div class="card"><h3 class="sh">プロフィール</h3>
+<div class="field"><label for="nickname">ニックネーム</label><input id="nickname" placeholder="ニックネーム" maxlength="12"></div>
+<div class="field"><label for="age">年齢</label><input id="age" type="number" inputmode="numeric" placeholder="年齢"></div>
+<div class="field"><label>性別</label><div class="chips" data-k="gender"></div></div>
+<div class="field"><label for="height">身長（cm）</label><input id="height" type="number" inputmode="decimal" placeholder="身長"></div>
+<div class="field"><label for="weight">体重（kg）</label><input id="weight" type="number" inputmode="decimal" placeholder="体重"></div></div>
+<div class="card"><h3 class="sh">食事</h3>
+<div class="field"><label for="goal">食事の目標</label><select id="goal"><option value="health">健康維持</option><option value="diet">ダイエット</option><option value="muscle">筋力アップ</option><option value="gain">体重を増やす</option></select></div>
+<div class="field"><label>アレルギー</label><div class="chips" data-k="allergy"></div></div>
+<div class="field"><label for="dislike">苦手な食材（カンマ区切り）</label><input id="dislike" placeholder="例：ピーマン, セロリ"></div>
+<div class="field"><label>好きな料理</label><div class="chips" data-k="fav"></div></div></div>
+<div class="card"><h3 class="sh">AIコンパニオン</h3>
+<div class="field"><label>性別</label><div class="choice"><button id="male" type="button" onclick="chooseComp('male')">👨🏻 男性</button><button id="female" type="button" onclick="chooseComp('female')">👩🏻 女性</button></div></div>
+<div class="field"><label>性格</label><div class="chips" data-k="personality"></div></div></div>
+<div class="card"><h3 class="sh">通知</h3>
+<label class="tog">今日のおすすめ料理<input type="checkbox" id="n1"></label>
+<label class="tog">食事の記録リマインド<input type="checkbox" id="n2"></label>
+<div class="field"><label for="ntime">通知時刻</label><input id="ntime" type="time"></div></div>
+<div class="stick"><button class="btn" onclick="saveProfile()">設定を保存</button></div>
+<p class="notice">保存した内容は、ホームのおすすめ・レシピ・AI相談に反映されます。データはこの端末内にのみ保存され、通知はこのデモでは送信されません。</p></div></section>
+<nav class="nav"><button class="active" data-page="home" onclick="showPage('home',this)"><span>⌂</span>ホーム</button><button data-page="recipes" onclick="showPage('recipes',this)"><span>♧</span>レシピ</button><button data-page="nutrition" onclick="showPage('nutrition',this)"><span>◔</span>分析</button><button data-page="lounge" onclick="showPage('lounge',this)"><span>▤</span>コラム</button><button data-page="profile" onclick="showPage('profile',this)"><span>♙</span>マイページ</button></nav>
+</div></div><div class="toast" id="toast"></div>
+<script>
+let companion='female',selectedMood='元気';function startApp(){document.getElementById('welcome').classList.add('hidden');document.getElementById('main').classList.remove('hidden');showPage('home')}
+function showPage(id,btn){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo(0,0)}
+function mood(el,name){document.querySelectorAll('.mood').forEach(b=>b.classList.remove('active'));el.classList.add('active');selectedMood=name;toast(name+'の気分に合わせておすすめを更新しました')}
+function chooseComp(g){companion=g;document.getElementById('male').classList.toggle('selected',g==='male');document.getElementById('female').classList.toggle('selected',g==='female');let face=g==='male'?'👨🏻‍🍳':'👩🏻‍🍳';['homeAvatar','chatAvatar','profileAvatar'].forEach(id=>document.getElementById(id).textContent=face);let name=g==='male'?'あなたのパートナー（男性）':'あなたのパートナー（女性）';['compName','chatName'].forEach(id=>document.getElementById(id).textContent=name);toast('コンパニオンを選択しました')}
+function saveProfile(){let n=document.getElementById('nickname').value||'こんにちは！';document.getElementById('hello').textContent='こんにちは、'+n+'さん';document.getElementById('profileName').textContent=n+'さん';toast('プロフィールを保存しました')}
+function sendMessage(){let input=document.getElementById('message'),v=input.value.trim();if(!v)return;let box=document.getElementById('chatbox'),bubble=document.createElement('div');bubble.className='bubble me';bubble.textContent=v;box.insertBefore(bubble,box.querySelector('.chatinput'));let reply=document.createElement('div');reply.className='bubble ai';reply.textContent='教えてくれてありがとう！「'+v+'」を参考に、あなたに合う食事を一緒に考えていこう ☘';box.insertBefore(reply,box.querySelector('.chatinput'));input.value='';box.scrollTop=box.scrollHeight}
+function toast(msg){let t=document.getElementById('toast');t.textContent=msg;t.style.display='block';clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.style.display='none',2200)}
+document.getElementById('message').addEventListener('keydown',e=>{if(e.key==='Enter')sendMessage()});
+</script>
+<style id="ux-improvements">
+:root{--focus:#b58a42}
+html{scroll-behavior:smooth}body{font-size:16px;line-height:1.55}
+button,input,select{font:inherit}button{touch-action:manipulation;min-height:44px}
+.btn{min-height:48px;letter-spacing:.01em}.nav button{min-height:48px;min-width:58px;padding:4px 6px;flex:1}
+.nav button span{line-height:1.2}.mood{min-height:72px;font-size:12px}
+.card,.mini,.companion{box-shadow:0 5px 18px #183c280b}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.sectionhead span[onclick]{cursor:pointer;min-height:44px;display:flex;align-items:center;padding:4px}
+.foodimg,.recipe img{flex-shrink:0}
+@media(min-width:600px){body{padding:24px 0}.app{border-radius:28px;overflow:hidden;min-height:calc(100dvh - 48px)}.nav{position:absolute;bottom:0;border-radius:0 0 28px 28px}.toast{bottom:110px}}
+@media(max-width:360px){.content{padding:16px 13px}.top{padding:19px 17px 22px}.greeting{font-size:21px}.nav button{font-size:9px;min-width:0}.foodimg{width:80px;height:78px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<script id="ux-improvements-js">
+// UX improvement layer: persistent profile, accessible navigation, clear feedback.
+(function(){
+  const $=id=>document.getElementById(id);
+  const safeRead=key=>{try{return JSON.parse(localStorage.getItem(key)||'{}')}catch(_){return {}}};
+  const safeWrite=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value));return true}catch(_){return false}};
+  // Persist profile locally on this device only; no server connection in this prototype.
+  const saved=safeRead('nutrimatch_profile_v1');
+  ['nickname','age','height','weight'].forEach(id=>{if(saved[id]!==undefined && $(id))$(id).value=saved[id]});
+  if(saved.companion==='male'||saved.companion==='female')chooseComp(saved.companion);
+  if(saved.nickname){$('hello').textContent='こんにちは、'+saved.nickname+'さん';$('profileName').textContent=saved.nickname+'さん'}
+  // Save recipes with an explicit selected state and persistent storage.
+  document.querySelectorAll('#recipes .recipe').forEach((card,index)=>{
+    const btn=card.querySelector('button');if(!btn)return;
+    const key='nutrimatch_saved_recipes_v1';let list=safeRead(key);if(!Array.isArray(list))list=[];
+    const name=card.querySelector('h3')?.textContent||('レシピ'+(index+1));
+    const update=()=>{list=safeRead(key);if(!Array.isArray(list))list=[];const active=list.includes(name);btn.textContent=active?'♥ 保存済み':'♡ 保存する';btn.setAttribute('aria-pressed',String(active));btn.classList.toggle('selected',active)};
+    btn.onclick=()=>{list=safeRead(key);if(!Array.isArray(list))list=[];if(list.includes(name))list=list.filter(x=>x!==name);else list.push(name);safeWrite(key,list);update();toast(list.includes(name)?'レシピを保存しました':'保存を解除しました')};update();
+  });
+  // Replace profile save with validation and local persistence.
+  window.saveProfile=function(){
+    const profile={nickname:$('nickname').value.trim(),age:$('age').value,height:$('height').value,weight:$('weight').value,companion:$('male').classList.contains('selected')?'male':'female'};
+    if(profile.age && (+profile.age<1||+profile.age>120)){toast('年齢を確認してください（1〜120）');$('age').focus();return}
+    if(profile.height && (+profile.height<50||+profile.height>250)){toast('身長を確認してください');$('height').focus();return}
+    if(profile.weight && (+profile.weight<10||+profile.weight>400)){toast('体重を確認してください');$('weight').focus();return}
+    safeWrite('nutrimatch_profile_v1',profile);
+    const n=profile.nickname||'こんにちは！';$('hello').textContent=profile.nickname?'こんにちは、'+profile.nickname+'さん':'こんにちは！';$('profileName').textContent=profile.nickname?profile.nickname+'さん':'こんにちは！';toast('プロフィールをこの端末に保存しました');
+  };
+  // Keyboard-friendly nav state and feedback.
+  document.querySelectorAll('.nav button').forEach(btn=>{btn.setAttribute('aria-label',btn.textContent.trim());btn.setAttribute('aria-current',btn.classList.contains('active')?'page':'false')});
+  const originalShow=window.showPage;
+  window.showPage=function(id,btn){originalShow(id,btn);document.querySelectorAll('.nav button').forEach(b=>b.setAttribute('aria-current',b.dataset.page===id?'page':'false'));const page=$(id);if(page){page.setAttribute('aria-live','polite');}}
+  // Make clickable mini cards keyboard reachable.
+  document.querySelectorAll('.mini').forEach(el=>{el.setAttribute('role','button');el.setAttribute('tabindex','0');el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click()}})});
+})();
+</script>
+
+<style id="settings-css">
+.hr{display:flex;align-items:center;gap:8px}.setbtn{border:1px solid #ffffff55;border-radius:22px;background:transparent;color:#f6ead8;font-size:12px;padding:0 12px;min-height:44px;cursor:pointer}.setbtn[aria-current=true]{background:#ffffff26}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips button{min-height:44px;padding:0 14px;border:1px solid #e4d6c2;background:#fff8ed;border-radius:22px;color:var(--ink);cursor:pointer}.chips button[aria-pressed=true]{background:#dce8d8;border-color:#6d986d;font-weight:700}
+.card h3.sh{font-size:14px;margin:0 0 6px;color:var(--brown)}.tog{display:flex;justify-content:space-between;align-items:center;min-height:48px;font-size:14px}.tog input{width:24px;height:24px;accent-color:var(--green2)}
+.stick{position:sticky;bottom:92px;z-index:4;padding-top:6px}.recipe.off{display:none}.sumrow{font-size:13px;line-height:1.8;margin:0}.sumrow b{color:var(--brown)}
+</style>
+<script id="settings-js">
+(function(){
+const $=id=>document.getElementById(id),KEY='nutrimatch_profile_v1';
+const rd=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(_){return{}}};
+const wr=v=>{try{localStorage.setItem(KEY,JSON.stringify(v));return true}catch(_){return false}};
+const OPT={gender:['男性','女性','回答しない'],personality:['やさしい','元気','クール'],allergy:['卵','乳','小麦','そば','えび','かに','落花生','魚','大豆'],fav:['和食','洋食','中華','アジア']};
+const GL={health:'健康維持',diet:'ダイエット',muscle:'筋力アップ',gain:'体重を増やす'};
+const DEF=()=>({gender:'回答しない',goal:'health',allergy:[],dislike:'',fav:[],personality:'やさしい',n1:true,n2:false,time:'08:00'});
+const D=[
+{n:'鶏むね肉とアボカドの彩りサラダ',m:'約15分 ・ 420kcal',t:['高たんぱく'],a:[],c:'洋食',g:['diet','muscle','health'],i:'photo-1547592180-85f173990554'},
+{n:'豆腐ときのこのスープ',m:'約20分 ・ 280kcal',t:['低カロリー'],a:['大豆'],c:'和食',g:['diet','health'],i:'photo-1547592166-23ac45744acd'},
+{n:'彩り野菜のボウル',m:'約10分 ・ 350kcal',t:['野菜たっぷり'],a:[],c:'洋食',g:['health','diet'],i:'photo-1512621776951-a57141f2eefd'},
+{n:'サーモンとアボカドの丼',m:'約15分 ・ 560kcal',t:['良質な脂質'],a:['魚'],c:'和食',g:['muscle','gain','health']},
+{n:'親子丼',m:'約20分 ・ 590kcal',t:['高たんぱく'],a:['卵'],c:'和食',g:['muscle','gain']},
+{n:'エビと野菜のパスタ',m:'約20分 ・ 520kcal',t:['満足感'],a:['えび','小麦'],c:'洋食',g:['gain','health']},
+{n:'野菜たっぷり八宝菜',m:'約20分 ・ 330kcal',t:['低脂質'],a:[],c:'中華',g:['diet','health']},
+{n:'鶏と野菜のスープカレー',m:'約30分 ・ 450kcal',t:['スパイス'],a:[],c:'アジア',g:['diet','health','muscle']}];
+const RA={'豆腐ときのこのスープ':['大豆']};
+const SH={
+salad:{bg:'#e8f0dc',p:1,it:[['e',70,88,26,13,'#6aa84f'],['e',120,92,28,13,'#7cb860'],['e',95,78,24,12,'#4f8f3f'],['e',85,102,20,9,'#e2c27a'],['e',112,106,18,9,'#e2c27a'],['c',132,80,8,'#d9534f'],['c',66,104,7,'#d9534f'],['e',98,92,14,8,'#b5d56a']]},
+soup:{bg:'#f3e6cf',vc:'#8b5e3c',f:'#e9c98f',s:1,it:[['e',75,78,14,8,'#fffdf5'],['e',105,82,14,8,'#fffdf5'],['e',130,76,12,7,'#fffdf5'],['c',90,72,7,'#a67c52'],['c',120,70,7,'#a67c52'],['c',100,88,5,'#6aa84f']]},
+veg:{bg:'#f7e3c8',vc:'#c97a4a',f:'#fff4dc',it:[['e',70,78,16,9,'#f08a24'],['e',100,72,16,10,'#4f8f3f'],['e',130,78,14,9,'#f2c94c'],['e',85,90,14,8,'#7b4a8c'],['e',118,90,15,8,'#d9534f'],['c',102,84,6,'#6aa84f']]},
+salmon:{bg:'#e4ecf2',vc:'#3a4f6b',f:'#fffdf5',it:[['e',75,78,20,9,'#f28b66'],['e',105,74,20,9,'#f4a07c'],['e',132,80,18,9,'#f28b66'],['e',95,90,14,8,'#9acd5a'],['e',120,92,12,7,'#9acd5a']]},
+oyako:{bg:'#f6e0d3',vc:'#a63d2f',f:'#f5d76e',it:[['e',80,78,18,9,'#fff2b0'],['e',115,80,22,10,'#fbe38a'],['e',98,70,14,7,'#d9a65c'],['c',92,88,4,'#4f8f3f'],['c',122,70,4,'#4f8f3f'],['c',108,90,4,'#4f8f3f']]},
+pasta:{bg:'#f7ead0',p:1,it:[['e',100,92,48,24,'#f0cf7a'],['e',90,90,32,14,'#e5bd5a'],['e',110,98,30,12,'#f4d98c'],['e',78,84,12,7,'#f08c78'],['e',125,86,12,7,'#f08c78'],['e',100,78,10,6,'#f08c78'],['c',95,102,5,'#4f8f3f'],['c',118,104,5,'#4f8f3f']]},
+hachi:{bg:'#efe4d0',p:1,it:[['e',100,92,52,26,'#b9854a'],['e',80,88,16,8,'#6aa84f'],['e',115,84,16,8,'#f08a24'],['e',100,98,14,8,'#fffdf5'],['e',128,98,12,7,'#7b4a8c'],['e',88,104,10,6,'#d9534f']]},
+curry:{bg:'#f3dcc0',vc:'#6b4a2f',f:'#d98a2b',s:1,it:[['e',80,78,16,8,'#f08a24'],['e',112,76,14,8,'#fffdf5'],['e',132,84,14,8,'#c0392b'],['e',95,90,14,8,'#6aa84f'],['e',70,92,10,6,'#f2c94c'],['e',118,92,16,8,'#a67c52']]}};
+function art(n){
+ const k=n.includes('スープカレー')?'curry':n.includes('サラダ')?'salad':n.includes('スープ')?'soup':n.includes('サーモン')?'salmon':n.includes('親子')?'oyako':n.includes('パスタ')?'pasta':n.includes('八宝菜')?'hachi':'veg',o=SH[k];
+ let x='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160"><rect width="200" height="160" fill="'+o.bg+'"/><ellipse cx="100" cy="142" rx="82" ry="9" fill="#0002"/>';
+ if(o.p)x+='<ellipse cx="100" cy="92" rx="84" ry="52" fill="#fffaf0" stroke="#e3d6bd" stroke-width="3"/><ellipse cx="100" cy="92" rx="62" ry="36" fill="#f6efe0"/>';
+ else x+='<path d="M16 76Q18 146 100 146Q182 146 184 76Z" fill="'+o.vc+'"/><ellipse cx="100" cy="76" rx="84" ry="22" fill="'+o.vc+'"/><ellipse cx="100" cy="76" rx="74" ry="17" fill="'+o.f+'"/>';
+ o.it.forEach(i=>{x+=i[0]==='c'?'<circle cx="'+i[1]+'" cy="'+i[2]+'" r="'+i[3]+'" fill="'+i[4]+'"/>':'<ellipse cx="'+i[1]+'" cy="'+i[2]+'" rx="'+i[3]+'" ry="'+i[4]+'" fill="'+i[5]+'"/>'});
+ if(o.s)x+='<path d="M80 52q-8-10 0-20M100 50q-8-10 0-22M120 52q-8-10 0-20" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" opacity=".8"/>';
+ return 'data:image/svg+xml;utf8,'+encodeURIComponent(x+'</svg>')}
+let P=Object.assign(DEF(),rd()),draft;
+const bad=p=>(p.dislike||'').split(/[,、，]/).map(x=>x.trim()).filter(Boolean);
+function suggest(p){const b=bad(p);return D.filter(d=>!d.a.some(x=>p.allergy.includes(x))&&!b.some(x=>d.n.includes(x))).map(d=>({d,s:(d.g.includes(p.goal)?2:0)+(p.fav.includes(d.c)?1:0)})).sort((x,y)=>y.s-x.s).map(x=>x.d)}
+function chips(){document.querySelectorAll('[data-k]').forEach(box=>{const k=box.dataset.k,one=!Array.isArray(draft[k]);box.innerHTML='';OPT[k].forEach(o=>{const btn=document.createElement('button');btn.type='button';btn.textContent=o;btn.setAttribute('aria-pressed',String(one?draft[k]===o:draft[k].includes(o)));btn.onclick=()=>{if(one)draft[k]=o;else{const i=draft[k].indexOf(o);i>-1?draft[k].splice(i,1):draft[k].push(o)}chips()};box.appendChild(btn)})})}
+function fill(){draft=JSON.parse(JSON.stringify(P));['nickname','age','height','weight','dislike'].forEach(k=>$(k).value=P[k]||'');$('goal').value=P.goal;$('n1').checked=P.n1;$('n2').checked=P.n2;$('ntime').value=P.time;$('male').classList.toggle('selected',P.companion==='male');$('female').classList.toggle('selected',P.companion==='female');chips()}
+function refresh(){
+ const s=suggest(P),d=s[0],tags=$('foodTags'),im=$('foodImg');tags.innerHTML='';
+ if(d){$('foodName').textContent=d.n;$('foodMeta').textContent=d.m;d.t.concat(['あなたに合う']).forEach(t=>{const e=document.createElement('span');e.className='tag';e.textContent=t;tags.appendChild(e)});im.src=art(d.n);im.alt=d.n;im.style.display=''}
+ else{$('foodName').textContent='条件に合う料理が見つかりません';$('foodMeta').textContent='設定を見直してみてね';im.style.display='none'}
+ $('compSay').textContent={'やさしい':'「今日もおつかれさま。無理せず、一緒に選ぼうね。」','元気':'「今日も食べよう！何を食べたい気分？」','クール':'「必要なものだけ選ぶ。気分を教えて。」'}[P.personality];
+ const b=bad(P);document.querySelectorAll('#recipes .recipe').forEach(c=>{const n=c.querySelector('h3').textContent;c.classList.toggle('off',(RA[n]||[]).some(x=>P.allergy.includes(x))||b.some(x=>n.includes(x)))});
+ const box=$('profSummary');box.innerHTML='';const bmi=(+P.height>0&&+P.weight>0)?(P.weight/Math.pow(P.height/100,2)).toFixed(1):'';
+ [['目標',GL[P.goal]],['アレルギー',P.allergy.join('・')||'なし'],['苦手な食材',bad(P).join('、')||'なし'],['好きな料理',P.fav.join('・')||'未設定'],['コンパニオン',(P.companion==='male'?'男性':'女性')+'・'+P.personality],['BMI',bmi||'未入力']].forEach(r=>{const p=document.createElement('p');p.className='sumrow';const l=document.createElement('b');l.textContent=r[0]+'：';p.appendChild(l);p.appendChild(document.createTextNode(r[1]));box.appendChild(p)})}
+window.saveProfile=function(){
+ const g=id=>$(id).value.trim(),age=g('age'),h=g('height'),w=g('weight');
+ if(age&&(+age<1||+age>120)){toast('年齢を確認してください（1〜120）');$('age').focus();return}
+ if(h&&(+h<50||+h>250)){toast('身長を確認してください');$('height').focus();return}
+ if(w&&(+w<10||+w>400)){toast('体重を確認してください');$('weight').focus();return}
+ P=Object.assign(P,JSON.parse(JSON.stringify(draft)),{nickname:g('nickname'),age:age,height:h,weight:w,companion:$('male').classList.contains('selected')?'male':($('female').classList.contains('selected')?'female':(P.companion||'female')),goal:$('goal').value,dislike:g('dislike'),n1:$('n1').checked,n2:$('n2').checked,time:$('ntime').value});
+ const ok=wr(P),n=P.nickname;$('hello').textContent=n?'こんにちは、'+n+'さん':'こんにちは！';$('profileName').textContent=n?n+'さん':'こんにちは！';refresh();
+ toast(ok?'設定を保存しました。おすすめに反映されます':'保存できませんでした（端末内保存が無効です）')};
+window.sendMessage=function(){
+ const input=$('message'),v=input.value.trim();if(!v)return;const box=$('chatbox'),at=box.querySelector('.chatinput');
+ const me=document.createElement('div');me.className='bubble me';me.textContent=v;box.insertBefore(me,at);
+ const s=suggest(P)[0],pre={'やさしい':'教えてくれてありがとう。','元気':'いいね！','クール':'了解。'}[P.personality];
+ const ai=document.createElement('div');ai.className='bubble ai';
+ ai.textContent=s?pre+'「'+v+'」を踏まえて、目標の「'+GL[P.goal]+'」なら「'+s.n+'」がおすすめ。'+(P.allergy.length?'（'+P.allergy.join('・')+'は除いているよ）':'')+' ☘':pre+'今の条件に合う料理が見つからないの。設定の苦手な食材やアレルギーを見直してみてね。';
+ box.insertBefore(ai,at);input.value='';box.scrollTop=box.scrollHeight};
+const prev=window.showPage;
+window.showPage=function(id,b){prev(id,b);$('setBtn').setAttribute('aria-current',id==='settings'?'true':'false');if(id==='settings')fill()};
+document.querySelectorAll('#recipes .recipe').forEach(c=>{const i=c.querySelector('img'),n=c.querySelector('h3').textContent;i.src=art(n);i.alt=n});
+const lg=document.querySelector('#lounge img');if(lg){lg.src=art('彩り野菜のボウル');lg.alt='バランスごはんのイメージ'}
+fill();refresh();
+})();
+</script>
+</body></html>
